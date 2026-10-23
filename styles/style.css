@@ -1,0 +1,97 @@
+body {
+    background: var(--sunset);
+    display: grid;
+    grid-template-columns: repeat(15,1fr);
+}
+.panel {
+    background: var(--panel-background);
+    border: var(--panel-border);
+    box-shadow: var(--panel-shadow);
+    padding: var(--panel-padding);
+    color: var(--panel-color);
+}
+header {
+    /*base*/
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    height: 4rem;
+    user-select: none;
+
+    /*name container*/
+    div {
+        display: flex;
+        align-items: center;
+        img {
+            width: 3rem;
+            height: 3rem;
+            margin-right: 1rem;
+        }
+    }
+    /*nav*/
+    nav {
+        display: flex;
+        gap: 1rem;
+        li {
+            list-style: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        * {
+            &:hover {
+                color: #f9ae23;
+                transform: scale(1.3) rotate(-1deg);
+                transition: all 0.1s ease-in;
+            }
+            &:active {
+                color: #eb6b09;
+                cursor: grabbing;
+                transform: scale(0.9) rotate(0.5deg);
+                transition: all 0.04s ease-in;
+            }
+        }
+    }
+    
+}
+main {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+    figure {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        img {
+            width: 100%;
+            height: auto;
+            max-width: 400px;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 0.5rem;
+            box-shadow: var(--panel-shadow);
+            transition: all 0.1s ease-in-out;
+            &:hover {
+                transform: scale(1.05);
+                box-shadow: var(--panel-shadow), 0 0 1rem #f9ae23;
+            }
+            &:active {
+                transform: scale(0.95);
+                box-shadow: var(--panel-shadow), 0 0 1rem #eb6b09;
+            }
+        }
+    }
+}
+footer {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 1rem;
+    p {
+        font-size: 0.8rem;
+        color: #fec794;
+    }
+}

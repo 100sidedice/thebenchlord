@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+:root {
+    --sunset: linear-gradient(180deg, #2d005a 0%, #eb6b09 60%, #f9ae23 65%, #101857);
+    /*panel colors*/
+    --panel-background: linear-gradient(180deg, #c3770555,#c3770588); 
+    --panel-border: 0.2rem solid #c37705;
+    --panel-border-radius: 0.5rem;
+    --panel-shadow: 0.5rem 0.5rem 1rem #c3770555;
+    --panel-padding: 1rem;
+    --panel-margin: 1rem;
+    --panel-color: #fec794;
+}
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+* {
+    box-sizing: border-box;
+    font-family: "Pixelify Sans", sans-serif;
+}
